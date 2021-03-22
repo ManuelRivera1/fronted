@@ -1,0 +1,44 @@
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="card">
+        <div class="card-header " >
+            <h3>Personales</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let persona of personas" class="text-center">
+                        <td>{{persona.id}}</td>
+                        <td>{{persona.name}}</td>
+                        <td>{{persona.direccion}}</td>
+                        <td>{{persona.telephone}}</td>
+                        <td>{{persona.estado}}</td>
+                        <!-- <td *ngIf="persona;then Activo else Inactivo"></td>
+                        <ng-template #Activo>
+                            Activo
+                            </ng-template>
+                        <ng-template #Inactivo>
+                            Inactivo
+                            </ng-template>-->
+                        <td> 
+                            <button (click)="Editar(persona)" class="btn btn-warning "> Editar </button>
+                            <button (click)="Delete(persona)"class="btn btn-danger "> Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

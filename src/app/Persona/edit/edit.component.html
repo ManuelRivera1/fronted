@@ -1,0 +1,38 @@
+<br>
+<br>
+<br>
+
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header " >
+            <h3>Editar Datos</h3>
+        </div>
+        <div class="card-body">
+            <form action="" >
+                <div class="form_group">
+                    <label for="">Nombre Y Apellido</label>
+                    <input [(ngModel)]="persona.name" type="text" class="form-control" name="name" id="">
+                </div>
+                <div class="form_group">
+                    <label for="">Dirección</label>
+                    <input [(ngModel)]="persona.direccion" type="text" class="form-control" name="direccion" id="">
+                </div>
+                <div class="form_group">
+                    <label for="">Teléfono</label>
+                    <input type="tel" [(ngModel)]="persona.telephone"  (keypress)="restrictNumeric($event)" class="form-control" name="telephone" id="">
+                </div>
+                <div class="form_group">
+                    <label for="">Estado</label>
+                    <select id="" name="estado" [(ngModel)]="persona.estado" class="form-control">
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                      </select>
+                </div>
+                <br>
+                <button (click)="Actualizar(persona)"  class="btn btn-danger">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
